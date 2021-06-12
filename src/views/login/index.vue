@@ -150,6 +150,14 @@ export default {
   created() {
     this.MSALPass = this.$msal.isAuthenticated()
     console.log('[Login Page] MSAL is Authenticated: ' + this.MSALPass)
+    if(this.MSALPass){
+      this.$store.dispatch('user/login', this.loginForm).then(() => {
+        this.$router.push({ path: this.redirect || '/' })
+        this.loading = false
+      }).catch(() => {
+        this.loading = false
+      })
+    }
   }
 }
 </script>
