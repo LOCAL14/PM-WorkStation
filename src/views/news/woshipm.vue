@@ -1,5 +1,5 @@
 <template>
-  <WebContent src="http://www.woshipm.com/" auto-close-side-bar></WebContent>
+  <WebContent src="https://www.woshipm.com/" auto-close-side-bar></WebContent>
 </template>
 
 <script>

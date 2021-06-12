@@ -1,5 +1,5 @@
 <template>
-  <WebContent src="http://mi.talkingdata.com/reports.html?category=all" ></WebContent>
+  <WebContent src="https://mi.talkingdata.com/reports.html?category=all" ></WebContent>
 </template>
 
 <script>

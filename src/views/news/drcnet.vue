@@ -1,5 +1,5 @@
 <template>
-  <WebContent src="http://report.drcnet.com.cn/#/" ></WebContent>
+  <WebContent src="https://report.drcnet.com.cn/#/" ></WebContent>
 </template>
 
 <script>
