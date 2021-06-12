@@ -49,6 +49,11 @@ Vue.use(msal, {
   }
 });
 
+function loggerCallback(logLevel, message, containsPii) {
+  console.log(message);
+}
+
+
 new Vue({
   el: '#app',
   router,

@@ -74,10 +74,10 @@ const actions = {
           text: "退出登录中，请稍后"
         });
         await removeToken() // must remove  token  first
-        await router.app.$msal.signOut()
+        router.app.$msal.signOut()
         await resetRouter()
         await commit('RESET_STATE')
-        await resolve()
+        resolve()
       }).catch(error => {
         reject(error)
       })
