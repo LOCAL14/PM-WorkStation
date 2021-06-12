@@ -1,11 +1,11 @@
 <template>
-  <WebContent src="https://www.woshipm.com/" auto-close-side-bar></WebContent>
+  <WebContent src="https://coffee.pmcaff.com/"></WebContent>
 </template>
 
 <script>
 import WebContent from '@/components/WebContent'
 export default {
-  name: 'woshipm',
+  name: 'pmcaff',
   components: { WebContent }
 }
 </script>

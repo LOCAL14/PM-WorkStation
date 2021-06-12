@@ -73,7 +73,7 @@ export default {
   .grid {
     width: 100%;
     display: grid;
-    padding: 10px;
+    padding: 10px 0;
     grid-template-columns: repeat(4, 24.5%);
     grid-row-gap: 5px;
     grid-column-gap: 5px;

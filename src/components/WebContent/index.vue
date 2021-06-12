@@ -45,7 +45,10 @@ export default {
     const iframe = document.querySelector('#ifra')
     // 处理兼容行问题
 
-    setTimeout(function() { _this.loadingEnd() }, 10000);
+    setTimeout(function() {
+      _this.loadingEnd()
+      return null
+    }, 50000);
 
     if (iframe.attachEvent) {
       iframe.attachEvent('onload', function() {

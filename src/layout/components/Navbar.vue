@@ -10,15 +10,18 @@
 <!--          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">-->
 <!--          <i class="el-icon-caret-bottom" />-->
 <!--        </div>-->
-        <i class="el-icon-setting" style="font-size: 1.3em" />
-        <el-dropdown-menu slot="dropdown" class="user-dropdown">
+        <i class="el-icon-setting" style="font-size: 1.3em; cursor: pointer" />
+        <el-dropdown-menu slot="dropdown" class="user-dropdown" style="text-align: right">
+          <el-dropdown-item disabled style="user-select: none">
+            Designed & Developed <br/> By Zachary Xia
+          </el-dropdown-item>
           <router-link to="/">
-            <el-dropdown-item>
-              Home
+            <el-dropdown-item divided>
+              首页
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">Log Out</span>
+            <span style="display:block;">退出登录</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>

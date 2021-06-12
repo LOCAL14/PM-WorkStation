@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'PM-WorkStation',
+  title: 'PM WorkStation',
 
   /**
    * @type {boolean} true | false

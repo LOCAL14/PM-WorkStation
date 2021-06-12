@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       title: 'PM WorkStation',
-      logo: 'https://qiniu.cdn.duohui.co/brand/duohui-icon.svg'
+      logo: 'https://iamxz-net.oss-cn-hangzhou.aliyuncs.com/share/logo.svg'
     }
   }
 }

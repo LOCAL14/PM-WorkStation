@@ -88,9 +88,14 @@ export const constantRoutes = [
             meta: { title: '京东 JELLY'},
           },
           {
-            path: 'woshipm',
+            path: 'pmcaff',
+            name: 'Pmcaff',
+            component: () => import('@/views/news/pmcaff'),
+            meta: { title: 'PMCAFF'},
+          },
+          {
+            path: 'http://www.woshipm.com/',
             name: 'Woshipm',
-            component: () => import('@/views/news/woshipm'),
             meta: { title: '人人都是产品经理'},
           }
         ]

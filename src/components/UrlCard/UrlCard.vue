@@ -5,7 +5,9 @@
         <div class="card-content-image">
           <el-image class="image" :src="imageUrl" fit="contain">
             <div slot="error" class="image-slot">
-              <el-avatar><b>{{ title[0] }}</b></el-avatar>
+              <el-avatar>
+                <b style="font-size: 1.4em;">{{ title[0].toUpperCase() }}</b>
+              </el-avatar>
             </div>
           </el-image>
         </div>
@@ -55,8 +57,7 @@ export default {
 <style scoped lang="scss">
 .card{
   min-width: 150px;
-  min-height: 80px;
-  max-height: 100px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
