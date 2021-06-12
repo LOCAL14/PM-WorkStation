@@ -1,6 +1,7 @@
 import { login, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import { resetRouter } from '@/router'
+import { Loading } from 'element-ui';
 import router from '@/router'
 
 const getDefaultState = () => {
@@ -68,12 +69,15 @@ const actions = {
   // user logout
   logout({ commit, state }) {
     return new Promise((resolve, reject) => {
-      logout(state.token).then(() => {
-        removeToken() // must remove  token  first
-        router.app.$msal.signOut();
-        resetRouter()
-        commit('RESET_STATE')
-        resolve()
+      logout(state.token).then(async () => {
+        await Loading.service({
+          text: "退出登录中，请稍后"
+        });
+        await removeToken() // must remove  token  first
+        await router.app.$msal.signOut()
+        await resetRouter()
+        await commit('RESET_STATE')
+        await resolve()
       }).catch(error => {
         reject(error)
       })
