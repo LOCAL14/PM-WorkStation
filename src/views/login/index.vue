@@ -1,6 +1,7 @@
 <template>
   <div class="login-container">
-    <p style="color: white; text-align:center;margin: 20% 0 0 0;">{{MSALPass?"欢迎":"正在重定向至登录页面..."}}</p>
+    <logo :collapse="false" />
+    <p style="color: white; text-align:center;margin: 18% 0 0 0;font-weight: bold">{{MSALPass?"欢迎":"正在重定向至登录页面..."}}</p>
     <el-button style="width:30%;text-align:center;margin: 2% 0 0 0;" :loading="loading" type="primary"  @click.native.prevent="handleLogin">点此继续</el-button>
     <!--Change for MSAL: add "v-show="false""  -->
     <el-form v-show="false" ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
@@ -57,9 +58,11 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
+import Logo from '@/layout/components/Sidebar/Logo'
 
 export default {
   name: 'Login',
+  components: { Logo },
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!validUsername(value)) {
