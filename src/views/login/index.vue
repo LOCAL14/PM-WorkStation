@@ -1,10 +1,10 @@
 <template>
   <div class="login-container">
     <logo style="user-select: none" :collapse="false"/>
-    <p style="color: white; text-align:center;margin: 18% 0 0 0;font-weight: bold;user-select: none">
+    <p style="color: white; text-align:center;margin: 16% 0 0 0;font-weight: bold;user-select: none;font-size: 1.3em">
       {{ MSALPass ? '欢迎' : '正在重定向至登录页面...' }}
     </p>
-    <el-button style="height:50px;width:20%;text-align:center;margin: 10% 0 0 0;" :loading="loading" type="primary"
+    <el-button style="height:50px;width:20%;text-align:center;margin: 6% 0 0 0;" :loading="loading" type="primary"
                @click.native.prevent="handleLogin" icon="el-icon-arrow-right">
       点此继续
     </el-button>
