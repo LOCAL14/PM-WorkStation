@@ -41,8 +41,7 @@ Vue.use(msal, {
   auth: {
     clientId: 'b4ab293c-e4d1-44c9-948c-578862995909',
     authority: 'https://login.microsoftonline.com/7276b6fa-3f2f-426c-ac31-30f60dd9e07c/',
-    // redirectUri: 'https://pm-workstation.iamxz.cn',
-    redirectUri: 'http://localhost:9528',
+    redirectUri: process.env.VUE_APP_MSAL_REDIRECT_URI,
     requireAuthOnInitialize: true
   },
   graph :{
