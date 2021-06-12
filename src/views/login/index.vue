@@ -5,7 +5,7 @@
       {{ MSALPass ? '欢迎' : '正在重定向至登录页面...' }}
     </p>
     <el-button style="height:50px;width:20%;text-align:center;margin: 6% 0 0 0;" :loading="loading" type="primary"
-               @click.native.prevent="handleLogin" icon="el-icon-arrow-right">
+               @click.native.prevent="handleLogin" icon="el-icon-arrow-right" v-waves>
       点此继续
     </el-button>
     <!--Change for MSAL: add "v-show="false""  -->
@@ -69,10 +69,14 @@
 <script>
 import { validUsername } from '@/utils/validate'
 import Logo from '@/layout/components/Sidebar/Logo'
+import waves from '@/directive/waves/index.js' // 水波纹指令
 
 export default {
   name: 'Login',
   components: { Logo },
+  directives: {
+    waves
+  },
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!validUsername(value)) {
